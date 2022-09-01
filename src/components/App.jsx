@@ -1,0 +1,13 @@
+import React from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Page from './Page';
+
+export default function App({ posts }) {
+  return (
+    <div className="container">
+      <Routes>
+        <Route path="/:page" element={<Page posts={posts} />} />
+      </Routes>
+    </div>
+  );
+}
